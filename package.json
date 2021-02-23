@@ -1,4 +1,20 @@
 {
     "name": "@zealmatch/schema",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "description": "Yup schemas for the front and back-end",
+    "license": "MIT",
+    "repository": "ZEAL-MATCH-LTD/schema",
+    "main": "index.js",
+    "keywords": [
+        "zeal",
+        "match",
+        "zealmatch",
+        "npm",
+        "package",
+        "schema",
+        "yup"
+    ],
+    "dependencies": {
+        "yup": "^0.32.9"
+    }
 }
