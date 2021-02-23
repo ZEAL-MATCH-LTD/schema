@@ -1,6 +1,6 @@
 {
     "name": "@zealmatch/schema",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Yup schemas for the front and back-end",
     "license": "MIT",
     "repository": "ZEAL-MATCH-LTD/schema",
