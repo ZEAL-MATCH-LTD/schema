@@ -1,5 +1,6 @@
 export const minGalleryLength = 2;
 export const minSignupAge = 18;
+export const minPasswordLength = 6;
 
 const male = 'male';
 const female = 'female';

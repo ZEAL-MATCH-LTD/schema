@@ -1,11 +1,13 @@
 import * as yup from 'yup';
-import { genderOrientation, minGalleryLength, minSignupAge } from './business-logic';
+import { genderOrientation, minGalleryLength, minPasswordLength, minSignupAge } from './business-logic';
 import errorMessages from './error-messages';
 
 export const str: yup.StringSchema = yup.string();
 export const num: yup.NumberSchema = yup.number();
-export const website: yup.StringSchema = yup.string().url();
 export const date: yup.DateSchema = yup.date();
+export const email: yup.StringSchema = str.email();
+export const password: yup.StringSchema = str.min(minPasswordLength, errorMessages.passwordMin);
+export const website: yup.StringSchema = yup.string().url();
 export const pushNotificationToken = yup.string();
 export const city = yup.string();
 export const lon: yup.NumberSchema = yup.number();
@@ -18,7 +20,7 @@ export const gallery: yup.ArraySchema<any> = yup.array(image).min(minGalleryLeng
 export const minAge = (age: number = minSignupAge): yup.DateSchema => {
   const now = Date.now();
   const cutoffDate = new Date(now - 1000 * 60 * 60 * 24 * 365 * age);
-  return yup.date().max(cutoffDate, errorMessages.minAge(age));
+  return yup.date().max(cutoffDate, errorMessages.minAge);
 };
 export const required = (schema: yup.AnySchema): yup.AnySchema => {
   return schema.required(errorMessages.required);
