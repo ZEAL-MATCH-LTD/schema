@@ -1,8 +1,9 @@
-import { genderOrientation, minGalleryLength, minSignupAge } from './business-logic';
+import { genderOrientation, maxBioLength, minGalleryLength, minSignupAge } from './business-logic';
 
 export default {
   required: 'This field is required',
   email: 'Must be a valid email',
+  bioMax: `Bio must not exceed ${maxBioLength} characters`,
   passwordMin: `Your password must be 6 characters minimum`,
   passwordMatch: 'Passwords must match',
   termsAndConditions: 'You must accept our terms and conditions.',

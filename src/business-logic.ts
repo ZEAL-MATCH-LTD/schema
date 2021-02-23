@@ -1,6 +1,7 @@
 export const minGalleryLength = 2;
 export const minSignupAge = 18;
 export const minPasswordLength = 6;
+export const maxBioLength = 350;
 
 const male = 'male';
 const female = 'female';

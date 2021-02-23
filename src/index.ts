@@ -1,5 +1,5 @@
 import * as yup from 'yup';
-import { genderOrientation, minGalleryLength, minPasswordLength, minSignupAge } from './business-logic';
+import { genderOrientation, maxBioLength, minGalleryLength, minPasswordLength, minSignupAge } from './business-logic';
 import errorMessages from './error-messages';
 
 export const str: yup.StringSchema = yup.string();
@@ -7,6 +7,7 @@ export const num: yup.NumberSchema = yup.number();
 export const date: yup.DateSchema = yup.date();
 export const email: yup.StringSchema = str.email();
 export const password: yup.StringSchema = str.min(minPasswordLength, errorMessages.passwordMin);
+export const bio: yup.StringSchema = str.max(maxBioLength, errorMessages.bioMax);
 export const website: yup.StringSchema = yup.string().url();
 export const pushNotificationToken = yup.string();
 export const city = yup.string();
