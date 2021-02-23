@@ -18,6 +18,7 @@ export const orientation: yup.StringSchema = yup.string().oneOf(genderOrientatio
 export const sports: yup.ArraySchema<any> = yup.array().min(1, errorMessages.pickAtleastOne);
 export const image: yup.StringSchema = yup.string().url();
 export const gallery: yup.ArraySchema<any> = yup.array(image).min(minGalleryLength, errorMessages.imagesMin);
+export const termsAndConditions: yup.BooleanSchema = yup.bool().oneOf([true], errorMessages.termsAndConditions);
 export const minAge = (age: number = minSignupAge): yup.DateSchema => {
   const now = Date.now();
   const cutoffDate = new Date(now - 1000 * 60 * 60 * 24 * 365 * age);
