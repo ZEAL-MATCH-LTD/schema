@@ -1,4 +1,4 @@
-import * as yup from 'yup'
+import * as yup from 'yup';
 import { genderOrientation, minGalleryLength, minSignupAge } from './business-logic';
 import errorMessages from './error-messages';
 
@@ -16,12 +16,12 @@ export const sports = yup.array().min(1, errorMessages.pickAtleastOne);
 export const image = yup.string();
 export const gallery = yup.array(image).min(minGalleryLength, errorMessages.imagesMin);
 export const minAge = (age: number = minSignupAge): yup.DateSchema => {
-    const now = Date.now();
-    const cutoffDate = new Date(now - (1000 * 60 * 60 * 24 * 365 * age));
-    return yup.date().max(cutoffDate, errorMessages.minAge(age));
-}
+  const now = Date.now();
+  const cutoffDate = new Date(now - 1000 * 60 * 60 * 24 * 365 * age);
+  return yup.date().max(cutoffDate, errorMessages.minAge(age));
+};
 export const required = (schema: yup.AnySchema): yup.AnySchema => {
-    return schema.required(errorMessages.required)
-}
+  return schema.required(errorMessages.required);
+};
 
 export default yup;
