@@ -29,3 +29,26 @@ export const required = (schema: yup.AnySchema): yup.AnySchema => {
 };
 
 export default yup;
+
+export interface CreateUserProps {
+  email: string;
+  password: string;
+  termsAndConditions: boolean;
+  photoURL?: string;
+  displayName?: string;
+}
+
+export interface UpdateUserProps {
+  email?: string,
+  password?: string;
+  displayName?: string;
+  dob?: Date;
+  gender?: string;
+  orientation?: string;
+  sports?: string[];
+  photoURL?: string;
+  gallery?: string[];
+  bio?: string;
+  pushNotificationToken?: string;
+  completedOnboarding?: boolean;
+}
