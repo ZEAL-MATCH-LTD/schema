@@ -39,7 +39,7 @@ export interface CreateUserProps {
 }
 
 export interface UpdateUserProps {
-  email?: string,
+  email?: string;
   password?: string;
   displayName?: string;
   dob?: Date;
