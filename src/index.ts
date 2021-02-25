@@ -49,6 +49,6 @@ export interface UpdateUserProps {
   photoURL?: string;
   gallery?: string[];
   bio?: string;
-  pushNotificationToken?: string|any;
+  pushNotificationToken?: string | any;
   completedOnboarding?: boolean;
 }
