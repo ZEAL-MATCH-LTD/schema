@@ -54,7 +54,7 @@ export interface UpdateUserProps {
 }
 
 export interface CreateTokenProps {
-  pushNotificationToken?: string|'DELETE';
+  pushNotificationToken?: string | 'DELETE';
 }
 export interface GetTokenProps {
   uid: string;
