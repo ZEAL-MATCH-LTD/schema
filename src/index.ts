@@ -35,6 +35,12 @@ export interface TimestampValue {
   _seconds: number;
 }
 
+export interface UpdateUserLocationProps {
+  city?: string;
+  lon?: number;
+  lat?: number;
+}
+
 export interface CreateUserProps {
   email: string;
   password: string;
