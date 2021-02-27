@@ -52,3 +52,10 @@ export interface UpdateUserProps {
   pushNotificationToken?: string | any;
   completedOnboarding?: boolean;
 }
+
+export interface CreateTokenProps {
+  pushNotificationToken?: string;
+}
+export interface GetTokenProps {
+  uid: string;
+}
