@@ -30,6 +30,11 @@ export const required = (schema: yup.AnySchema): yup.AnySchema => {
 
 export default yup;
 
+export interface TimestampValue {
+  _nanoseconds: number;
+  _seconds: number;
+}
+
 export interface CreateUserProps {
   email: string;
   password: string;
