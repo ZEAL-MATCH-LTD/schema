@@ -58,7 +58,7 @@ export interface UpdateUserProps {
   completedOnboarding?: boolean;
 }
 
-export interface CreateTokenProps {
+export interface UpdatePreferencesProps {
   pushNotificationToken?: string | 'DELETE';
 }
 export interface GetTokenProps {
