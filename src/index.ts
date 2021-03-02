@@ -69,7 +69,7 @@ export interface UpdatePreferencesProps {
 }
 
 export interface UpdateTokensProps {
-  [key: string]: string|'DELETE';
+  [key: string]: string | 'DELETE';
 }
 export interface GetTokenProps {
   uid: string;
