@@ -65,7 +65,11 @@ export interface UpdateUserProps {
 }
 
 export interface UpdatePreferencesProps {
-  pushNotificationToken?: string | 'DELETE';
+  enablePushNotifications?: boolean;
+}
+
+export interface UpdateTokensProps {
+  [key: string]: string;
 }
 export interface GetTokenProps {
   uid: string;
